@@ -1,0 +1,9 @@
+export const ApiUrl = 'https://suriyadevchitfunds.in';
+export const api = '/crm';
+export const login = '/API_verify_login';
+export const my_account = '/API_my_account';
+export const API_today_earnings = '/API_today_earnings';
+export const API_filter_date_wise ='/API_filter_date_wise';
+export const API_search_customer ='/API_search_customer';
+export const API_filter_date_wise_and_phone = '/API_filter_date_wise_and_phone';
+export const API_pay_amount = '/API_pay_amount';
