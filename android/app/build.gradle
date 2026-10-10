@@ -1,6 +1,11 @@
+import groovy.json.JsonSlurper
+
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
+
+def packageJsonFile = new File("$rootDir/../package.json")
+def packageJson = new JsonSlurper().parseText(packageJsonFile.text)
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -86,7 +91,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 8
-        versionName "8.0"
+        versionName packageJson.version
     }
     signingConfigs {
         debug {
